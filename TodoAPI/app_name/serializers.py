@@ -10,7 +10,7 @@ class TodoSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = user
-        fields = ('id', 'url', 'email', 'uname','password','verify')
+        fields = ('id', 'url', 'email', 'uname','password','verified')
 
 class OtpSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

@@ -1,7 +1,6 @@
 import json
 import random
-
-from form import TodoForm
+from .form import TodoForm
 from django.shortcuts import render , redirect
 from django.views.decorators.http import require_POST
 import requests
@@ -46,7 +45,7 @@ def completeTodo(request,todo_id):
 
 def login(request):
     if request.method == 'POST':
-        url = 'http://127.0.0.1:8000/user'
+        url = 'http://127.0.0.1:8000/user/'
         data = {
             'username': request.POST['userid'],
             'password': request.POST['password']
@@ -64,23 +63,25 @@ def login(request):
     else:
         return render(request, 'todo/login.html')
 
+def registerPage(request):
+    return render(request, 'todo/register.html')
 
 def register(request):
     if request.method == 'POST':
-        url = 'http://127.0.0.1:8000/user'
+        url = 'http://127.0.0.1:8000/user/'
         data = {
             'email':request.POST['email'],
-            'user': request.POST['uname'],
+            'uname': request.POST['uname'],
             'password': request.POST['password'],
             'verified' : False
         }
 
         data_json = json.dumps(data)
 
-        response = requests.post(url, data=data_json)
+        response = requests.post(url, data=data_json, headers=headers)
 
         code = random.randint(1000,9000)
-        url2 = 'http://127.0.0.1:8000/opt'
+        url2 = 'http://127.0.0.1:8000/otp/'
         data2 = {
             'email': request.POST['email'],
             'code' : code
@@ -97,16 +98,28 @@ def register(request):
 
 def verify(request):
     if request.method == 'POST':
-        url = 'http://127.0.0.1:8000/otp'
+        url = 'http://127.0.0.1:8000/otp/'
         data = {
             'email': request.POST['email'],
-            'code': request.POST['code']
         }
 
         data_json = json.dumps(data)
 
-        response = requests.post(url, data=data_json)
+        response = requests.get(url, params=data)
 
+        response_data = json.loads(response.content)
+
+        for sample in response_data:
+         if 'code' in sample and str(sample['code']) == str(request.POST['code']):
+            return render(request, 'todo/index.html')
+
+         else :
+            context = {'Error':"Not Verified"}
+            return render(request, 'todo/verify.html',context)
+
+
+    else:
+        return render(request, 'todo/verify.html')
 
 
 

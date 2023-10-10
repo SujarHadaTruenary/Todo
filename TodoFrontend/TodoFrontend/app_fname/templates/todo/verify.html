@@ -24,8 +24,12 @@
 
 <div class=" d-flex align-items-center justify-content-center maincontainer  col-12 " style="height: 100vh;">
     <div class="d-flex flex-column gap-2 shadow-2-strong py-4 px-4 rounded-4">
-        <form action="{% url 'verify' %}" method="POST" role="form">
+        <form class="d-flex flex-column gap-2" action="{% url 'verify' %}" method="POST" role="form">
+            {% csrf_token %}
           <h1> Verification Form </h1>
+            {% if Error %}
+          <span class="badge text-bg-danger">{{ Error }}</span>
+            {% endif %}
             <input type="text" name="email"  placeholder="Email Address">
             <input type="text" name="code" placeholder="Verification Code">
         <button class="btn text-light text-center bg-success container-fluid mb-1"> Verify

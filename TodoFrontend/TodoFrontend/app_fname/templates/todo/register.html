@@ -24,11 +24,12 @@
 
 <div class=" d-flex align-items-center justify-content-center maincontainer  col-12 " style="height: 100vh;">
     <div class="d-flex flex-column gap-2 shadow-2-strong py-4 px-4 rounded-4">
-        <form action="{% url 'register' %}" method="POST" role="form">
+        <form class="d-flex flex-column gap-2" action="{% url 'register' %}" method="POST" role="form">
+            {% csrf_token %}
           <h1> Registration Form </h1>
             <input type="text" name="email"  placeholder="Email Address">
             <input type="text" name="uname" placeholder="User Name">
-            <input type="text" name="password"  placeholder="password">
+            <input type="password" name="password"  placeholder="password">
 
         <button class="btn text-light text-center bg-success container-fluid mb-1"> Register
          </button>

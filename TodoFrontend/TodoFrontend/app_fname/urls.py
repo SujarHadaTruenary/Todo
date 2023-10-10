@@ -7,9 +7,8 @@ urlpatterns  = [
     path('add', views.addTodo, name='add'),
     path('complete/<todo_id>/',views.completeTodo , name = 'complete'),
     path('verify',views.verify,name='verify'),
-    path('register',views.register,name='register')
-
-
+    path('register',views.register,name='register'),
+    path('registerpage', views.registerPage, name='registerpage')
 
     # path('deletecomplete',views.deletecompleted ,name = 'deletecompleted'),
     # path ('deleteall',views.deleteall , name = 'deleteall')

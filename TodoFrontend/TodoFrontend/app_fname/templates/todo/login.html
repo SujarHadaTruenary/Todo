@@ -25,6 +25,7 @@
 <div class=" d-flex align-items-center justify-content-center maincontainer  col-12 " style="height: 100vh;">
     <div class="d-flex flex-column gap-2 shadow-2-strong py-4 px-4 rounded-4">
         <form class="d-flex flex-column gap-2" action="{% url 'login' %}" method="POST" role="form">
+        {% csrf_token %}
           <h1> Login Page </h1>
             {% if Errors %}
           <span class="badge text-bg-danger">{{ Errors }}</span>
@@ -36,7 +37,7 @@
           </button>
 
         </form>
-        <a href="{% url 'register' %}"><span class="btn text-light text-center bg-success container-fluid mb-1" > Register Now</span>
+        <a href="{% url 'registerpage' %}"><span class="btn text-light text-center bg-success container-fluid mb-1" > Register Now</span>
         </a>
     </div>
 </div>
