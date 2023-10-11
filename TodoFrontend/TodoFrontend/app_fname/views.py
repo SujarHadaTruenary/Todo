@@ -14,9 +14,10 @@ headers = {
 }
 
 def index(request):
-    r = requests.get('http://127.0.0.1:8000/todo/', headers=headers)
+    r = requests.get('http://127.0.0.1:8000/todos/list/', headers=headers)
     json_data = r.content
     data = json.loads(json_data)
+
     # todolist = [{"name": item["name"], "done": item["done"]} for item in data]
 
     form = TodoForm()
@@ -29,30 +30,29 @@ def index(request):
    # todo_list = Todo.objects.order_by('id')
 
 
-@require_POST
 def addTodo(request):
     data = {"name": request.POST['text']}
     data_json = json.dumps(data)
 
-    r = requests.post('http://127.0.0.1:8000/todo/', data=data_json, headers=headers)
+    r = requests.post('http://127.0.0.1:8000/todos/create/', data=data_json, headers=headers)
     return redirect('index')
 
 def completeTodo(request,todo_id):
-    url = f'http://127.0.0.1:8000/todo/{todo_id}/'
-    r = requests.delete(url, headers=headers)
+    url = f'http://127.0.0.1:8000/todos/delete/{todo_id}'
+    r = requests.delete(url)
     return redirect('index')
 
 
 def login(request):
     if request.method == 'POST':
-        url = 'http://127.0.0.1:8000/user/'
+        url = 'http://127.0.0.1:8000/login/'
         data = {
-            'username': request.POST['userid'],
+            'email': request.POST['email'],
             'password': request.POST['password']
         }
         data_json = json.dumps(data)
 
-        response = requests.get(url, data=data_json)
+        response = requests.post(url, data=data_json)
         response_data = response.json()
         if 'verified' in response_data and response_data['verified'] is True:
             return render(request, 'todo/index.html')
@@ -68,7 +68,7 @@ def registerPage(request):
 
 def register(request):
     if request.method == 'POST':
-        url = 'http://127.0.0.1:8000/user/'
+        url = 'http://127.0.0.1:8000/user/create/'
         data = {
             'email':request.POST['email'],
             'uname': request.POST['uname'],
@@ -81,13 +81,13 @@ def register(request):
         response = requests.post(url, data=data_json, headers=headers)
 
         code = random.randint(1000,9000)
-        url2 = 'http://127.0.0.1:8000/otp/'
+        url2 = 'http://127.0.0.1:8000/otp/create/'
         data2 = {
             'email': request.POST['email'],
             'code' : code
         }
         data_json2 = json.dumps(data2)
-        response2 = requests.post(url2, data=data_json2)
+        response2 = requests.post(url2, data=data_json2,headers=headers)
         print(code)
 
         return render(request, 'todo/verify.html')
@@ -98,31 +98,44 @@ def register(request):
 
 def verify(request):
     if request.method == 'POST':
-        url = 'http://127.0.0.1:8000/otp/'
+        url = 'http://127.0.0.1:8000/otp/verify/'
         data = {
             'email': request.POST['email'],
+            'code': request.POST['code'],
         }
 
         data_json = json.dumps(data)
 
-        response = requests.get(url, params=data)
+        response = requests.post(url, data=data_json, headers=headers)
+        response_data = response.json()
 
-        response_data = json.loads(response.content)
-
-        for sample in response_data:
-         if 'code' in sample and str(sample['code']) == str(request.POST['code']):
+        if 'success' in response_data and response_data['success'] is True:
             return render(request, 'todo/index.html')
-
-         else :
-            context = {'Error':"Not Verified"}
-            return render(request, 'todo/verify.html',context)
-
+        else:
+            error_message = response_data.get('error', 'Not Verified')
+            context = {'Error': error_message}
+            return render(request, 'todo/verify.html', context)
 
     else:
         return render(request, 'todo/verify.html')
 
 
 
+def resendcode(request):
+    if request.method == 'POST':
+       code = random.randint(1000, 9000)
+       url = 'http://127.0.0.1:8000/otp/reset_created_at/'
+       data = {
+              'email': request.POST['email'],
+              'code': code,
+       }
+       data_json = json.dumps(data)
+       response = requests.post(url, data=data_json, headers=headers)
+       print(code)
+       return render(request, 'todo/verify.html')
+
+    else:
+       return render(request, 'todo/resendcode.html')
 
 # def deletecompleted(request):
 #     Todo.objects.filter(complete__exact=True).delete()

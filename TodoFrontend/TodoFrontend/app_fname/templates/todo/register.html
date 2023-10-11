@@ -29,10 +29,12 @@
           <h1> Registration Form </h1>
             <input type="text" name="email"  placeholder="Email Address">
             <input type="text" name="uname" placeholder="User Name">
-            <input type="password" name="password"  placeholder="password">
+            <span id='errorbox' class="badge text-bg-warning"></span>
+            <input id="password" type="password" name="password"  placeholder="password">
+            <input id="repassword" type="password" name="repassword" placeholder="retype password">
 
-        <button class="btn text-light text-center bg-success container-fluid mb-1"> Register
-         </button>
+          <button id="submit-button" class="btn text-light text-center bg-success container-fluid mb-1"> Register
+          </button>
 
         </form>
     </div>
@@ -40,6 +42,28 @@
 
 </body>
 <script type=" text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js">
+</script>
+
+<script>
+ document.getElementById("repassword").addEventListener("change", function() {
+  validatePassword();
+});
+
+function validatePassword() {
+  var password = document.getElementById("password").value;
+  var repassword = document.getElementById("repassword").value;
+
+  if (password === repassword) {
+    document.getElementById('errorbox').innerText = "";
+    document.getElementById("submit-button").disabled = false;
+  }
+  else{
+      document.getElementById("submit-button").disabled = true;
+      document.getElementById('errorbox').innerText = "Warning Password Mismatch";
+  }
+
+}
+
 </script>
 
 </html>

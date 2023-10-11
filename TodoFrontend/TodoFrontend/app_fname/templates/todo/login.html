@@ -30,7 +30,7 @@
             {% if Errors %}
           <span class="badge text-bg-danger">{{ Errors }}</span>
             {% endif %}
-          <input type="text" name="userid"  placeholder="User Id">
+          <input type="text" name="email"  placeholder="email">
           <input type="password" name="password" placeholder="Password">
 
           <button class="btn text-light text-center bg-success container-fluid mb-1"> Login
@@ -39,6 +39,7 @@
         </form>
         <a href="{% url 'registerpage' %}"><span class="btn text-light text-center bg-success container-fluid mb-1" > Register Now</span>
         </a>
+
     </div>
 </div>
 

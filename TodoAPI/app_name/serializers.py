@@ -15,4 +15,4 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class OtpSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = otp
-        fields = ('id', 'url', 'email', 'code')
+        fields = ('id', 'url', 'email', 'code','created_at')

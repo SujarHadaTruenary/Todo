@@ -20,6 +20,7 @@ class user(models.Model):
 class otp(models.Model):
     email = models.CharField(max_length=50)
     code = models.CharField(max_length=10)
+    created_at = models.DateTimeField(auto_now_add=True)
     #otp = random.randint(100000,999999)
 
     def __str__(self):

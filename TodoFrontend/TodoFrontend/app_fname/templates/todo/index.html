@@ -61,7 +61,7 @@
 							{% if todo.done %}
 							<li class="list-group-item todo-completed">{{todo.name}}</li>
 							{% else %}
-						<a href="{% url 'complete' todo.id %}"><li class="list-group-item ">{{todo.name}}</li></a>
+						    <a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.name }}</li></a>
 							{% endif %}
 						{% endfor %}
 
