@@ -4,6 +4,7 @@ from django.db import models
 class todo(models.Model):
     name = models.CharField(max_length=50)
     done = models.BooleanField(default=False)
+    deadline = models.DateTimeField()
 
     def __str__(self):
         return self.name

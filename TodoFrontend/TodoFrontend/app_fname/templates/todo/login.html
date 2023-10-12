@@ -27,8 +27,8 @@
         <form class="d-flex flex-column gap-2" action="{% url 'login' %}" method="POST" role="form">
         {% csrf_token %}
           <h1> Login Page </h1>
-            {% if Errors %}
-          <span class="badge text-bg-danger">{{ Errors }}</span>
+            {% if Error %}
+          <span class="badge text-bg-danger">{{ Error }}</span>
             {% endif %}
           <input type="text" name="email"  placeholder="email">
           <input type="password" name="password" placeholder="Password">
