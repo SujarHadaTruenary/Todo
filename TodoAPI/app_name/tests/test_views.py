@@ -90,4 +90,4 @@ class OtpViewTestCase(APITestCase):
         otp_obj = otp.objects.create(email='test@example.com', code='123456')
         data = {'email': 'test@example.com', 'code': '654321'}
         response = self.client.put(reverse('otp'), data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_200_OK) 
