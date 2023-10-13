@@ -88,7 +88,7 @@ class TodoView(APIView):
 
         if serializer.is_valid():
             serializer.save()
-            return Response({'msg':'Complete'})
+            return Response({'msg':'Complete'},status=status.HTTP_200_OK)
         return Response(serializer.errors , status = status.HTTP_400_BAD_REQUEST)
 
 
@@ -139,7 +139,6 @@ class OtpView(APIView):
     def post(self, request,format=None):
         serializer = OtpSerializer(data=request.data)
         if not serializer.is_valid():
-            print('good')
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         email = serializer.validated_data.get('email')
@@ -153,7 +152,9 @@ class OtpView(APIView):
         if obj.created_at < timezone.now() - timezone.timedelta(seconds=10):
             return Response({'error': 'OTP expired'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+        object = user.objects.get(email=email)
+        object.verified = True
+        object.save()
         return Response({'success': True}, status=status.HTTP_200_OK)
 
     def put(self, request,format=None):

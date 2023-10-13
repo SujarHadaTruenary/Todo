@@ -137,6 +137,15 @@ def resendcode(request):
     else:
        return render(request, 'todo/resendcode.html')
 
+
+def pageTodo(request):
+    if request.method == "POST":
+
+        page = request.POST['pagenumber']
+        url = f'http://127.0.0.1:8000/todo/paginate/{page}'
+        response = requests.put(url, data=data_json, headers=headers)
+
+
 # def deletecompleted(request):
 #     Todo.objects.filter(complete__exact=True).delete()
 #

@@ -31,7 +31,7 @@ urlpatterns = [
      # path ('user/<int:pk>', views.UserView.as_view()),
      #
      # #otp
-     path('otp/',views.OtpView.as_view()),
+     path('otp/',views.OtpView.as_view(),name='otp'),
      # path('otp/<int:pk>',views.OtpView.as_view()),
 
 
