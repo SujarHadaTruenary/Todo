@@ -24,14 +24,14 @@ urlpatterns = [
      path('todo-groups/', views.TodoGroupList.as_view(), name='todo-group-list'),
 
      #register
-     path('register/', views.register.as_view(), name='register'),
-
-     # #users
-     path ('user/', views.User.as_view(),name='user'),
-     # path ('user/<int:pk>', views.UserView.as_view()),
+     # path('register/', views.register.as_view(), name='register'),
      #
-     # #otp
-     path('otp/',views.OtpView.as_view(),name='otp'),
+     # # #users
+     # path ('user/', views.User.as_view(),name='user'),
+     # # path ('user/<int:pk>', views.UserView.as_view()),
+     # #
+     # # #otp
+     # path('otp/',views.OtpView.as_view(),name='otp'),
      # path('otp/<int:pk>',views.OtpView.as_view()),
 
 

@@ -15,12 +15,25 @@ from app_name.serializers import (
 
 class TodoGroupListTestCase(APITestCase):
     def test_get_todo_group_list(self):
+        # Arrange
+        todo1 = todo.objects.create(name="Task 1", deadline="2023-12-31T23:59:59Z")
+        todo2 = todo.objects.create(name="Task 2", deadline="2023-12-31T23:59:59Z")
 
-        todo.objects.create(name="Task 1", deadline="2023-12-31T23:59:59Z")
-        todo.objects.create(name="Task 2", deadline="2023-12-31T23:59:59Z")
-
+        # Action
         response = self.client.get(reverse('todo-group-list'))
+
+        # Assert
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        response_data = response.data  # Parse the response content as JSON
+        self.assertEqual(response_data['results'][0]['name'], todo1.name)
+        self.assertEqual(response_data['results'][0]['deadline'], todo1.deadline)
+        self.assertEqual(response_data['results'][1]['name'], todo2.name)
+        self.assertEqual(response_data['results'][1]['deadline'], todo2.deadline)
+
+
+
+
+
 
 
 class TodoListTestCase(APITestCase):
@@ -49,7 +62,7 @@ class TodoViewTestCase(APITestCase):
         todo_item = todo.objects.create(name="UpdatedTodo", deadline="2023-12-31T23:59:59Z")
         data = {'name': 'UpdatedTodo', 'done': True ,'deadline':'2023-12-31T23:59:59Z'}
         response = self.client.put(reverse('todo-detail', args=[todo_item.id]), data, format='json')
-        print(response.content)
+        print(response.json)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
