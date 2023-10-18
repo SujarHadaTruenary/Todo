@@ -1,11 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
-
-class user(models.Model):
+class user(AbstractUser):
     email = models.CharField(max_length=50)
     uname = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
     verified = models.BooleanField(default=False)
 
     def __str__(self):
