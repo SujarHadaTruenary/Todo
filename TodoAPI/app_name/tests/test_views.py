@@ -1,5 +1,6 @@
-import json
-
+import pytest
+from unittest.mock import patch, MagicMock
+from django.http import HttpResponse
 from rest_framework.test import APITestCase
 from django.urls import reverse
 from rest_framework import status
@@ -12,6 +13,11 @@ from app_name.serializers import (
     OtpSerializer,
     ResetSerializer,
 )
+
+
+
+
+
 
 class TodoGroupListTestCase(APITestCase):
     def test_get_todo_group_list(self):
@@ -33,6 +39,17 @@ class TodoGroupListTestCase(APITestCase):
 
 
 
+
+class TodoListTestCase(APITestCase):
+
+    @patch('app_name.models.todo.objects.create')
+    def test_get_todo_list(self, mock_create,xyz,sfsdf):
+        # Mock the create method to return a mock response with status code 200
+        mock_response = HttpResponse(status=status.HTTP_200_OK)
+        mock_create.return_value = mock_response
+
+        response = self.client.get(reverse('todo-paginate', args=[1]))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
 
@@ -62,7 +79,7 @@ class TodoViewTestCase(APITestCase):
         todo_item = todo.objects.create(name="UpdatedTodo", deadline="2023-12-31T23:59:59Z")
         data = {'name': 'UpdatedTodo', 'done': True ,'deadline':'2023-12-31T23:59:59Z'}
         response = self.client.put(reverse('todo-detail', args=[todo_item.id]), data, format='json')
-        print(response.json)
+
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
@@ -104,3 +121,18 @@ class OtpViewTestCase(APITestCase):
         data = {'email': 'test@example.com', 'code': '654321'}
         response = self.client.put(reverse('otp'), data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK) 
+
+
+@pytest.fixture
+def create_todo_mock():
+    with patch('app_name.models.todo.objects.create') as mock_create:
+        yield mock_create
+
+def test_get_todo_list(client, create_todo_mock):
+    # Mock the create method to return a mock response with status code 200
+    mock_response = MagicMock(HttpResponse)
+    mock_response.status_code = status.HTTP_200_OK
+    create_todo_mock.return_value = mock_response
+
+    response = client.get(reverse('todo-paginate', args=[1]))
+    assert response.status_code == status.HTTP_200_OK

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b211f80d-b570-4b47-a9c0-84157f2de3f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../User/.idea/User.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserAuthentication/.idea/UserAuthentication.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserAuthentication/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserAuthentication/myapp/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TodoAPI/app_name/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/.idea/dataSources/2febfb8a-1c55-4cd6-b263-2933fa26d0f3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/.idea/dataSources/2febfb8a-1c55-4cd6-b263-2933fa26d0f3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/TodoAPI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/TodoAPI/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UserAuthentication/myapp/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UserAuthentication/myapp/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/app_name/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/app_name/migrations/0002_remove_otp_deadline.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/app_name/migrations/0003_remove_otp_deadline.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/app_name/migrations/0004_todo_deadline.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/app_name/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../TodoAPI/app_name/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TodoAPI/db.sqlite3" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2WxQDPbdhFXEGMEJAc0zGl9vMR4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Learn" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Learn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b211f80d-b570-4b47-a9c0-84157f2de3f4" name="Changes" comment="" />
+      <created>1697671630864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697671630864</updated>
+      <workItem from="1697671633653" duration="1785000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
