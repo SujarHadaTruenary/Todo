@@ -5,8 +5,6 @@ from django.contrib.auth.models import BaseUserManager
 
 class UserCustomManager(BaseUserManager):
     def create_user(self, phone_number , password=None , **extra_fields):
-        if not phone_number :
-            raise ValueError("Phone Number is required")
 
         extra_fields['email'] = self.normalize_email(extra_fields['email'])
         user = self.model(phone_number = phone_number , **extra_fields)
@@ -14,22 +12,23 @@ class UserCustomManager(BaseUserManager):
         user.save(using =self.db)
         return user
 
-    def create_superuser(self, phone_number , password = None, **extra_fields):
+    def create_superuser(self, password = None, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_active', True)
         extra_fields.setdefault('verified', True)
 
-        return self.create_user(phone_number,password,**extra_fields)
+        return self.create_user(password,**extra_fields)
 
 class user(AbstractUser):
-    email = models.CharField(max_length=50)
+    email = models.EmailField(unique= True)
     verified = models.BooleanField(default=False)
 
+    USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = UserCustomManager
     def __str__(self):
-        return self.uname
+        return self.username
 
 class otp(models.Model):
     email = models.CharField(max_length=50)
