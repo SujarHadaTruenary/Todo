@@ -34,17 +34,20 @@ class TodoGroupList(APIView):
         return Response(serializer.data)
 
 
-
-
-
-
-
 class TodoList(APIView):
     def get(self,request,page=None, format=None):
+        pageNumber = page
+        todos = []
+        if pageNumber is not None:
+           todos = TodoListServices.list_todo_paginate(pageNumber)
 
-        todos = TodoListServices.list_todo_paginate(page)
+        else:
+            todos = TodoListServices.list_todo_paginate(1)
 
-        # page_number = page
+        serializer = TodoSerializer(todos, many=True, context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+  # page_number = page
         # page_size = 10
         # if page_number is None:
         #     page_number = 1
@@ -52,10 +55,6 @@ class TodoList(APIView):
         # todos = todo.objects.all()[
         #  (page_number - 1) * page_size: page_number * page_size
         #  ]
-
-        serializer = TodoSerializer(todos, many=True, context={'request': request})
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
 
 
 class TodoView(APIView):
@@ -69,7 +68,7 @@ class TodoView(APIView):
          return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-        todos = TodoListServices.list_todo()
+        todos = TodoListServices.list_todo_paginate()
         serializer = TodoSerializer(todos, many=True , context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 

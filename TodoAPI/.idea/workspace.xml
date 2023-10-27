@@ -5,61 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddb56d9-e452-4330-9bab-99b02f5c9978" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/Learn/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/.idea/User.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/User/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/User/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/User/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/User/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/User/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/User/myapp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/.idea/UserAuthentication.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/UserAuthentication/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/UserAuthentication/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/UserAuthentication/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/UserAuthentication/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/UserAuthentication/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Extra/UserAuthentication/myapp/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoAPI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TodoAPI/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_name/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_name/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_name/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_name/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_name/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_name/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_name/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_name/views.py" afterDir="false" />
     </list>
@@ -131,7 +79,7 @@
       <recent name="E:\Internship\django\2ndTodoAPI\TodoAPI\accounts" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: app_name.tests.test_views">
+  <component name="RunManager">
     <configuration name="Test: app_name.tests.test_views" type="DjangoTestsConfigurationType" temporary="true">
       <module name="TodoAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -281,7 +229,7 @@
       <workItem from="1697671364216" duration="178000" />
       <workItem from="1697683203245" duration="9713000" />
       <workItem from="1697768816877" duration="10035000" />
-      <workItem from="1698379294995" duration="13715000" />
+      <workItem from="1698379294995" duration="20499000" />
     </task>
     <servers />
   </component>
@@ -298,10 +246,11 @@
     <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views_TodoViewTestCase_test_put_todo.coverage" NAME="Test: app_name.tests.test_views.TodoViewTestCase.test_put_todo Coverage Results" MODIFIED="1697608129932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_url_TestUrls_test_todourl.coverage" NAME="Test: app_name.tests.test_url.TestUrls.test_todourl Coverage Results" MODIFIED="1697198286562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views_TodoViewTestCase_test_post_todo.coverage" NAME="Test: app_name.tests.test_views.TodoViewTestCase.test_post_todo Coverage Results" MODIFIED="1697689916394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views.coverage" NAME="Test: app_name.tests.test_views Coverage Results" MODIFIED="1697771122703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views.coverage" NAME="Test: app_name.tests.test_views Coverage Results" MODIFIED="1698400382787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views_TodoListTestCase_test_get_todo_list.coverage" NAME="Test: app_name.tests.test_views.TodoListTestCase.test_get_todo_list Coverage Results" MODIFIED="1697686268668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views_TodoViewTestCase_test_get_todo.coverage" NAME="Test: app_name.tests.test_views.TodoViewTestCase.test_get_todo Coverage Results" MODIFIED="1697194372568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views_TodoListTestCase.coverage" NAME="Test: app_name.tests.test_views.TodoListTestCase Coverage Results" MODIFIED="1697686945499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/TodoAPI$views.coverage" NAME="views Coverage Results" MODIFIED="1698400393468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_name" />
     <SUITE FILE_PATH="coverage/TodoAPI$Test__app_name_tests_test_views_TodoViewTestCase_test_delete_todo.coverage" NAME="Test: app_name.tests.test_views.TodoViewTestCase.test_delete_todo Coverage Results" MODIFIED="1697195148019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

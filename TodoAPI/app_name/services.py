@@ -5,12 +5,11 @@ from rest_framework.pagination import PageNumberPagination
 
 
 class TodoListServices:
-    def list_todo_paginate( page ):
-
+    @staticmethod
+    def list_todo_paginate(page=1):
         page_number = page
         page_size = 10
-        if page_number is None:
-            page_number = 1
+
 
         todos = todo.objects.all()[
                 (page_number - 1) * page_size: page_number * page_size
@@ -18,7 +17,8 @@ class TodoListServices:
 
         return todos
 
-    def grouped_by_deadline(self):
+    @staticmethod
+    def grouped_by_deadline():
         grouped_todos = todo.objects.values('deadline').annotate(
             todo_count=Count('id')
         )
